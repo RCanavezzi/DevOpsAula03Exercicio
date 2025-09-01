@@ -1,0 +1,23 @@
+name: Meu primeiro workflow de CI
+
+on:
+  push:
+    branches-ignore:
+     - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Imprime uma mensagem de boas-vindas
+        run: |
+          echo "Olá mundo, bem-vindo ao meu primeiro workflow!"
+      - name: Mostra o diretório de trabalho
+        run: |
+          pwd
+      - name: Lista os arquivos do diretório home
+        run: |
+          ls -la
+      - name: Branch
+        run: |
+          echo "O commit foi enviado para a branch: ${{ github.ref }}"
