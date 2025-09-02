@@ -22,7 +22,8 @@ jobs:
         run: |
           echo "O commit foi enviado para a branch: ${{ github.ref }}"
       - name: RA - Nome
-        echo: "Ronaldo Canavezzi 6324536"
+        run: |
+          echo: "Ronaldo Canavezzi 6324536"
       - name: Mostra o diretório de trabalho
         run: |
           echo "Repositório: ${{ github.repository }}" 
